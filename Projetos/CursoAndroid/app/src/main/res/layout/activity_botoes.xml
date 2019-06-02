@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <!-- Usado para amarração das variáveis -->
+    <!-- Declara quais variaveis estarão amarradas com o codigo Java -->
+    <data>
+
+    </data>
+
+    <!-- Layout da tela -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/botoes_layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/botoes_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/botoes_btn2"
+                android:text="1"/>
+
+            <Button
+                android:id="@+id/botoes_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/botoes_btn4"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="2"/>
+
+            <Button
+                android:id="@+id/botoes_btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/botoes_btn1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@id/botoes_btn2"
+                android:text="3"/>
+
+            <Button
+                android:id="@+id/botoes_btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="4"/>
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/botoes_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </FrameLayout>
+
+
+</layout>
+
+

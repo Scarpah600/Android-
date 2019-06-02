@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Curso Android</string>
+
+    <string name="botao_1">Clique-me</string>
+    <string name="botao_7">Vamos pra outra activity!</string>
+    <string name="botao_8">Vai para outra activity sem volta!</string>
+    <string name="botao_google">Pesquisar no Google</string>
+    <string name="botao_camera">Tirar foto</string>
+    <string name="content_logo">Logo da aplicação</string>
+    <string name="login_usuario">Usuário ou email</string>
+    <string name="login_senha">Senha</string>
+    <string name="login_efetuar_login">Efetuar Login</string>
+
+
+</resources>

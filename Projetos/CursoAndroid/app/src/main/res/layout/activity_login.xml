@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <!-- Usado para amarração das variáveis -->
+    <!-- Declara quais variaveis estarão amarradas com o codigo Java -->
+    <data>
+        <variable
+            name="login"
+            type="br.com.koruthos.cursoandroid.model.Login"/>
+    </data>
+
+    <!-- Layout da tela -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Imagem da logo superior -->
+                <ImageView
+                    android:id="@+id/login_img_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@string/content_logo"
+                    android:src="@drawable/computer"/>
+
+                <!-- Imagem com o icone do usuario -->
+                <ImageView
+                    android:id="@+id/login_img_usuario"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/login_img_logo"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:src="@drawable/ic_face"/>
+
+                <!-- Caixa de texto do nome do usuario -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/login_layout_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/login_img_usuario"
+                    android:layout_toEndOf="@id/login_img_usuario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_edit_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login_usuario"
+                        android:text="@{ login.usuario }"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Não usamos mais o edit text pq ele é simples e feio -->
+                <!--EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/-->
+
+                <!-- Imagem com o icone do usuario -->
+                <ImageView
+                    android:id="@+id/login_img_senha"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/login_img_usuario"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:src="@drawable/ic_lock"/>
+
+                <!-- Caixa de texto do nome do usuario -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/login_layout_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/login_img_senha"
+                    android:layout_toEndOf="@id/login_img_senha">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_edit_senha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login_senha"
+                        android:text="@{ login.senha }"
+                        android:inputType="numberPassword"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/login_btn_login1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/login_img_senha"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_toEndOf="@id/login_img_senha"
+                    android:text="@string/login_efetuar_login"/>
+
+                <Button
+                    android:id="@+id/login_btn_login2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/login_btn_login1"
+                    android:layout_toEndOf="@id/login_img_senha"
+                    android:text="@string/login_efetuar_login"/>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>
+
+
